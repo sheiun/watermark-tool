@@ -10,7 +10,11 @@ fs.readdir(srcFolder, (err, files) => {
                 const W = image.bitmap.width, H = image.bitmap.height;
                 Jimp.read('watermark.png').then(img => {
                     const w = img.bitmap.width, h = img.bitmap.height;
-                    image.composite(img, (W - w) / 2, (H - h) / 2).write(dstFolder + file);
+                    image.composite(img, (W - w) / 2, (H - h) / 2, {
+                        mode: Jimp.BLEND_MULTIPLY,
+                        opacitySource: 1,
+                        opacityDest: .5
+                    }).write(dstFolder + file);
                 })
             })
     });
