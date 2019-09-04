@@ -11,9 +11,9 @@ fs.readdir(srcFolder, (err, files) => {
                 Jimp.read('watermark.png').then(img => {
                     const w = img.bitmap.width, h = img.bitmap.height;
                     image.composite(img, (W - w) / 2, (H - h) / 2, {
-                        mode: Jimp.BLEND_MULTIPLY,
-                        opacitySource: 1,
-                        opacityDest: .5
+                        mode: Jimp.BLEND_SOURCE_OVER,
+                        opacitySource: .5,
+                        opacityDest: 1
                     }).write(dstFolder + file);
                 })
             })
