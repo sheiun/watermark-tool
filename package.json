@@ -1,0 +1,27 @@
+{
+  "name": "watermark-tool",
+  "version": "1.0.0",
+  "description": "A watermark tool",
+  "main": "index.ts",
+  "dependencies": {
+    "jimp": "^0.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheiun/watermark-tool.git"
+  },
+  "keywords": [
+    "watermark",
+    "jimp"
+  ],
+  "author": "SheiUn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sheiun/watermark-tool/issues"
+  },
+  "homepage": "https://github.com/sheiun/watermark-tool#readme"
+}
